@@ -7,12 +7,8 @@ Welcome to the **Monopoly in Python** project! This project recreates the famous
 1. [Project Description](#project-description)
 2. [Features](#features)
 3. [Prerequisites](#prerequisites)
-4. [Installation](#installation)
-5. [Usage](#usage)
-6. [Project Structure](#project-structure)
-7. [Tests](#tests)
-8. [Contributing](#contributing)
-9. [License](#license)
+4. [Usage](#usage)
+5. [Project Structure](#project-structure)
 
 ---
 
@@ -36,11 +32,39 @@ The project is designed to work in both local and multiplayer modes, with a turn
 
 ## Prerequisites
 
-Before running this project, make sure you have Python 3.x installed on your machine.
+Before running this project, make sure you have Python extension installed on Visual Code.
 
-- **Python 3.x**: [Download Python here](https://www.python.org/downloads/)
+- **Python extension on Visual Code**
 
 Additionally, the project uses the following libraries that can be installed via `pip`:
 
 - **pygame** (if you have a graphical interface)
 - **random** (for generating random game events)
+
+---
+
+## Usage
+
+Once the installation is complete, you can start the game by running the main file. Use the following command to start the game:
+
+Python main.py
+
+The game will launch in the console, and you'll be able to play Monopoly with multiple players taking turns.
+
+---
+
+## Project Structure
+
+Projet-Monopoly/
+├── img/                       # Contains images used in the game (e.g., cards, board images, player pieces)
+├── main.py                    # Main entry point for the game (starts the game loop and initializes the game)
+├── test.py                    # Test file (contains unit tests for various components of the game)
+├── plateau.py                 # Game board logic (defines the board, spaces, and interactions between them)
+├── joueur.py                  # Player management (handles player properties, actions, and states)
+├── partie.py                  # Game mechanics (controls the flow of the game, turns, and game rules)
+├── case.py                    # Game space logic (defines individual spaces on the board and their behavior)
+├── terrain.py                 # Property spaces (manages properties, rents, and building mechanics)
+├── case_speciale.py           # Special space logic (defines special spaces like Chance or Community Chest)
+├── README.md                  # Project documentation (provides an overview of the project, installation, and usage)
+├── chartre_prog.md            # Coding rules (sets the guidelines for coding practices and conventions in the project)
+└──                            # (optional: other files or directories, such as for future features, assets, or documentation)
