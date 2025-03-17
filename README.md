@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Monopoly Project school (edition) in Python
-=======
-# Monopoly Project in Python
->>>>>>> 9504352fe77e28a9376fcb9f4d3486dd4bd76657
 
 Welcome to the **Monopoly in Python** project! This project recreates the famous **Monopoly** board game in a Python environment, allowing you to play against other players in a digital format. **Realised by ludo-mastant, EvanSurGit and Rylight2512 ( abandoned us during the year )**
 
@@ -20,11 +16,7 @@ Welcome to the **Monopoly in Python** project! This project recreates the famous
 
 This project implements a digital version of the **Monopoly** board game using Python. The objective of the game is to buy properties, collect rent, build houses and hotels, and bankrupt the other players.
 
-<<<<<<< HEAD
 The project is designed to work in local multiplayer mode, with a turn-based system, Chance and Community Chest cards, and classic Monopoly rules.
-=======
-The project is designed to work in both local and multiplayer modes, with a turn-based system, Chance and Community Chest cards, and classic Monopoly rules.
->>>>>>> 9504352fe77e28a9376fcb9f4d3486dd4bd76657
 
 ---
 
