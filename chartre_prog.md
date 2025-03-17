@@ -1,6 +1,6 @@
-# Programming Charter for Monopoly in Python
+# Programming Charter for Monopoly school edition in Python
 
-This charter defines the best practices and guidelines to follow when developing the **Monopoly in Python** project. The aim is to ensure consistency, readability, and maintainability of the code throughout the project.
+This charter defines the best practices and guidelines to follow when developing the **Monopoly school edition in Python** project. The aim is to ensure consistency, readability, and maintainability of the code throughout the project.
 
 ---
 
