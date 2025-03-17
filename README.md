@@ -1,6 +1,6 @@
 # Monopoly Project school (edition) in Python
 
-Welcome to the **Monopoly in Python** project! This project recreates the famous **Monopoly** board game in a Python environment, allowing you to play against other players in a digital format. **Realised by ludo-mastant, evanSurGit and Rylight2512 ( abandoned us during the year )**
+Welcome to the **Monopoly in Python** project! This project recreates the famous **Monopoly** board game in a Python environment, allowing you to play against other players in a digital format. **Realised by ludo-mastant, EvanSurGit and Rylight2512 ( abandoned us during the year )**
 
 ## Table of Contents
 
