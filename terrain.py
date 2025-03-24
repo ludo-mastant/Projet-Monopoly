@@ -1,3 +1,5 @@
+from Joueur import Joueur
+
 class Terrain :
 
     cout_achat = {
@@ -20,7 +22,7 @@ class Terrain :
         'T24': 330,
     }
 
-    cout_constr_maison = {
+    cout_maisons = {
         'T11': 100,
         'T24 BIS': 100,
         'T22': 150,
@@ -30,7 +32,7 @@ class Terrain :
         'T24': 350,
     }
 
-    cout_constr_hotel = {
+    cout_hotels = {
         'T11': 500,
         'T24 BIS': 500,
         'T22': 700,
@@ -40,9 +42,9 @@ class Terrain :
         'T24': 1000,
     }
 
-    def __init__(self, nom, couleur, nbr_maison, nbr_hotel, proprio=None) :
+    def __init__(self, nom, salle, nbr_maison, nbr_hotel, proprio=None) :
         self._nom = nom
-        self._couleur = couleur
+        self._salle = salle
         self._nbr_maison = nbr_maison
         self._nbr_hotel = nbr_hotel
         self._proprio = proprio
@@ -62,9 +64,31 @@ class Terrain :
     """Méthodes ameliorer_terrain"""
 
     def ameliorer_terrain(self):
-        if self.solde >= continue
-        return
+        
+        """Améliore le terrain (rajoute des maisons ou des hôtels)."""
+        
+        if self.nb_hotels == 1:
+            print(self.nom,  "a déjà un hôtel. Impossible d'améliorer davantage.")
+            return
+        
+        if self.nb_maisons < 4:
+            if Joueur.solde >= self.cout_maisons:
+                self._nb_maisons += 1
+                Joueur.solde -= self.cout_maisons
+                print("Une maison a été ajoutée sur", self._nom)
+            else:
+                print("Le joueur n'a pas assez d'argent pour ajouter une maison.")
+        elif self._nb_maisons == 4:
+            if Joueur.solde >= self.cout_hotels:
+                self._nb_hotels += 1
+                self._nb_maisons = 0  # 4 maisons deviennent un hôtel
+                Joueur.solde -= self.cout_hotels
+                print("Un hôtel a été ajouté sur", self._nom)
+            else:
+                print("Le joueur n'a pas assez d'argent pour ajouter un hôtel.")
     
+    """Accesseur de la classe terrain"""
+
     def getLoyer(self):
         return self.loyer
     
@@ -73,3 +97,4 @@ class Terrain :
     
     def getPrix(self):
         return self.cout_achat
+    
