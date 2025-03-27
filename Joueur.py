@@ -1,5 +1,5 @@
 import random
-from Terrain2 import Terrain 
+from terrain import Terrain 
 
 class Joueur:
 
@@ -12,7 +12,7 @@ class Joueur:
 
     def tirer_de(self):
         tirer = random.randint(1,6)
-        print (f"Le joueur {self.nom} a tiré " , tirer , )
+        #print (f"Le joueur {self.nom} a tiré " , tirer , )
         #self.position += tirer
         return tirer
 
@@ -25,7 +25,7 @@ class Joueur:
             Le joueur achete le terrain terrain
         """
         #possede = []
-        achete = input(f'Voulez vous acheter le terrain {terrain.nom} ? (0/1)')
+        achete = input(f'{self.nom} , voulez vous acheter le terrain {terrain.nom} ? (0/1)')
         if achete == 1 :
             if self.solde >= terrain.prix :
                 self.solde -= terrain.prix()
@@ -34,7 +34,7 @@ class Joueur:
             else:
                 print (f"Le joueur {self.nom} n'a pas assez d'argent pour acheter le terrain {terrain.nom} , car le prix était de {terrain.nom}, et il n'avait que {self.solde} €")
         else: 
-            print(f"Le joueur{self.nom} ne veut pas acheter le terrain {terrain.nom} puis passe son tour ")
+            print(f"Le joueur {self.nom} ne veut pas acheter le terrain {terrain.nom} puis passe son tour ")
         
 
     def payer(self,terrain):
