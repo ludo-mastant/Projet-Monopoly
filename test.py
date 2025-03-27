@@ -1,6 +1,7 @@
 # Importation des classes Joueur et Terrain
 from Joueur import Joueur
-from Terrain2 import Terrain
+from terrain import Terrain
+from plateau import Plateau
 
 # Création de deux joueurs
 joueur1 = Joueur(nom="Alice", solde=2000, position=0)
@@ -43,7 +44,7 @@ print(f"Le solde de {joueur2.nom} est maintenant {joueur2.solde}€")
 print(f"Le terrain {terrain1.nom} a {terrain1.nbr_maisons} maison(s) et {terrain1.nbr_hotels} hôtel(s).")
 
 
-
+# Test de plateau
 plateau = Plateau()
 print(plateau.avoir_terrain(0))  # Devrait renvoyer "Case départ"
 print(plateau.avoir_terrain(1))  # Devrait renvoyer "Propriété 1"

@@ -1,5 +1,5 @@
 import random
-from Terrain2 import Terrain 
+from terrain import Terrain 
 
 class Joueur:
 
