@@ -46,7 +46,7 @@ print(f"Le solde de {joueur2.nom} est maintenant {joueur2.solde}€")
 print(f"Le terrain {terrain1.nom} a {terrain1.nbr_maisons} maison(s) et {terrain1.nbr_hotels} hôtel(s).")
 
 
-
+# Test de plateau
 plateau = Plateau()
 print(plateau.avoir_terrain(0))  # Devrait renvoyer "Case départ"
 print(plateau.avoir_terrain(1))  # Devrait renvoyer "Propriété 1"
