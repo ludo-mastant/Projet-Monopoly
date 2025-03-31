@@ -58,10 +58,11 @@ from Joueur import Joueur
 from terrain import Terrain
 from CaseSpeciale import CaseSpeciale
 import random
+import time
 
 # Création des joueurs
-j1=str(input("Quel est le nom du Joueur 1 ?"))
-j2=str(input("Quel est le nom du Joueur 2 ?"))
+j1=str(input("Quel est le nom du Joueur 1 ? "))
+j2=str(input("Quel est le nom du Joueur 2 ? "))
 joueur1 = Joueur(j1)
 joueur2 = Joueur(j2)
 
@@ -92,19 +93,34 @@ cases_speciales = [
     haleine_du_prof, devoir_surveille, salle_de_notes, controle_surprise
 ]
 
+
 # Test affichage des cases spéciales
 print("\n--- TEST AFFICHAGE DES CASES SPECIALES ---")
 for case in cases_speciales:
     print(f"Case : {case.nom}, Type : {case.type_case}")
 
+
+time.sleep(5)
+
 # Test achat d'un terrain par un joueur
 print("\n--- TEST ACHAT TERRAIN ---")
 joueur1.acheter(terrain1)
 
+
+
+time.sleep(5)
+"""
 # Test si un joueur tombe sur une case spéciale
 case_tiree = random.choice(cases_speciales)
-print(f"\n--- TEST CASE SPECIALE ({case_tiree.nom}) ---")
+print(f"--- TEST CASE SPECIALE ({case_tiree.nom}) ---")
 case_tiree.appliquer_effet(joueur1)
+"""
+case_tiree2 = cases_speciales[12]
+print(f"\n--- TEST CASE SPECIALE 2 ({case_tiree2.nom}) ---")
+case_tiree2.appliquer_effet(joueur1)
+
+
+time.sleep(5)
 
 # Test paiement du loyer si un joueur atterrit sur un terrain possédé
 print("\n--- TEST PAIEMENT LOYER ---")

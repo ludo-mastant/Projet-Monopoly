@@ -25,10 +25,10 @@ class Joueur:
             Le joueur achete le terrain terrain
         """
         #possede = []
-        achete = input(f'{self.nom} , voulez vous acheter le terrain {terrain.nom} ? (0/1)')
+        achete = int(input(f'{self.nom} , voulez vous acheter le terrain {terrain.nom} ? (0/1)'))
         if achete == 1 :
             if self.solde >= terrain.prix :
-                self.solde -= terrain.prix()
+                self.solde -= terrain.prix
                 print (f"Le joueur {self.nom} a acheté le terrain {terrain.nom} pour le prix de {terrain.prix} € , il lui reste donc {self.solde} €")
                 self.terter.append(terrain)
             else:

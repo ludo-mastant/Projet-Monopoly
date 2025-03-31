@@ -1,6 +1,6 @@
-# from Joueur import Joueur
+from Case import Case
 
-class Terrain:
+class Terrain(Case):
     # Coût d'achat en fonction du numéro de salle
     cout_achat = {
         'T11': 60, 'T24 BIS': 100, 'T22': 140, 'T21': 180, 
@@ -26,7 +26,7 @@ class Terrain:
 
     def __init__(self, nom, salle, proprio=None):
         """Initialisation du terrain"""
-        self.nom = nom  # Nom du terrain
+        super().__init__(nom)
         self.salle = salle  # Numéro de salle 
         self.proprio = proprio  #
         self.nbr_maisons = 0
