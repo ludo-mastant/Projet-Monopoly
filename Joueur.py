@@ -8,6 +8,7 @@ class Joueur:
         self.solde = solde 
         self.position = position 
         self.terter = []
+        self.en_prison = False
 
 
     def tirer_de(self):
@@ -18,7 +19,7 @@ class Joueur:
 
     def deplacement(self, nb_cases):
         
-        self.position += nb_cases  #tirer
+        self.position = (self.position + nb_cases)%23  #tirer
 
     def acheter(self, terrain):
         """
@@ -31,6 +32,7 @@ class Joueur:
                 self.solde -= terrain.prix
                 print (f"Le joueur {self.nom} a acheté le terrain {terrain.nom} pour le prix de {terrain.prix} € , il lui reste donc {self.solde} €")
                 self.terter.append(terrain)
+                terrain.proprio = self
             else:
                 print (f"Le joueur {self.nom} n'a pas assez d'argent pour acheter le terrain {terrain.nom} , car le prix était de {terrain.nom}, et il n'avait que {self.solde} €")
         else: 
@@ -43,14 +45,13 @@ class Joueur:
 
             si le terrain sur la case que l'on est a  un proprio , il faut donner en argent le prix du loyer actuel du batiment 
         """
-
-        if self.solde < terrain.loyer : # self.terter.getLoyer(Terrain)
-            terrain.proprio.solde += self.solde
-            
-            print (f"Le joueur {self.nom} n'a pas assez d'argent et donc ne peut pas payer le loyer et donc donne tout son argent a {terrain.proprio.solde}({self.solde}€)")
-            self.solde = -1
-        else :
-            self.solde -= terrain.loyer
-            terrain.proprio.solde += terrain.loyer
-            print (f"Le joueur {self.nom} a payé le loyer de {terrain.loyer} € a {terrain.proprio.nom}")
-
+        if terrain.proprio and terrain.proprio != self:
+            if self.solde < terrain.loyer : # self.terter.getLoyer(Terrain)
+                terrain.proprio.solde += self.solde
+                
+                print (f"Le joueur {self.nom} n'a pas assez d'argent et donc ne peut pas payer le loyer et donc donne tout son argent a {terrain.proprio.solde}({self.solde}€)")
+                self.solde = -1
+            else :
+                self.solde -= terrain.loyer
+                terrain.proprio.solde += terrain.loyer
+                print (f"Le joueur {self.nom} a payé le loyer de {terrain.loyer} € a {terrain.proprio.nom}")

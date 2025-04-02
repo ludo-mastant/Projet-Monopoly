@@ -74,6 +74,37 @@ class CaseSpeciale(Case):
         elif self.type_case == "évenement" :
             joueur.solde -= 50 
             print (f"👩‍🏫  {joueur.nom} doit payer 50€ pour impressionner les profs et éviter des remarques négatives. Il a maintenant {joueur.solde}€")
+        
+    def aller_prison(self, joueur):
+        if self.nom == "En Prison":
+            print(f"🚔 {joueur.nom} s'est fait choper en train de tricher et va en heure de colle !")
+            joueur.position = 9  # La prison est sur la case 9
+            joueur.en_prison = True  # Il est maintenant en prison
+
+    def est_en_prison(self, joueur):
+        """Vérifie si le joueur est en prison"""
+        return joueur.en_prison
+
+    def gerer_prison(self, joueur):
+        """Gère le cas où un joueur est en prison et doit faire un 6 pour sortir"""
+        if self.nom == "Prison":
+            if joueur.en_prison:
+                print(f"⏳ {joueur.nom} est en prison. Il doit faire un 6 pour sortir.")
+                lancer_de = random.randint(1, 6)  # Simule le lancé de dé
+                print(f"🎲 {joueur.nom} a lancé un {lancer_de}.")
+                
+                if lancer_de == 6:
+                    print(f"✅ {joueur.nom} a fait un 6 et peut sortir de prison !")
+                    joueur.en_prison = False  # Il est libéré
+                else:
+                    print(f"❌ {joueur.nom} reste en prison.")
+            else :
+                print ("Visite guidée gratuit de la prison ")
+        
+
+
+
+        
 
 
         

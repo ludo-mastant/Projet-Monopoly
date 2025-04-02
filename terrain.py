@@ -40,7 +40,10 @@ class Terrain(Case):
 
     def est_achetable(self):
         """Retourne True si le terrain n’a pas de propriétaire"""
-        return self.proprio is None
+        if self.proprio is None :
+            return True
+        else: 
+            return False
 
     def ameliorer_terrain(self, joueur):
         """
