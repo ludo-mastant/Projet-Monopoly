@@ -4,6 +4,8 @@
 
 Ce fichier contient la classe `Joueur`, qui gère les actions et l'état d'un joueur dans un jeu de Monopoly. Les actions principales incluent le tirage des dés, le déplacement sur le plateau, l'achat de terrains et le paiement de loyers.
 
+---
+
 ## Classe `Joueur`
 
 ### Attributs
@@ -12,6 +14,8 @@ Ce fichier contient la classe `Joueur`, qui gère les actions et l'état d'un jo
 - **`solde`** (int) : Le solde d'argent du joueur, initialisé à 2000 €.
 - **`position`** (int) : La position actuelle du joueur sur le plateau, initialisée à 0.
 - **`terter`** (list) : Liste des terrains que le joueur possède.
+
+---
 
 ### Méthodes
 
@@ -50,10 +54,13 @@ Permet au joueur de payer le loyer d'un terrain appartenant à un autre joueur. 
   - `terrain` : Le terrain pour lequel le loyer doit être payé.
   - `autre_joueur` : L'autre joueur à qui le loyer est payé.
 
+---
+
 ## Conclusion
 
 Ce fichier se concentre sur la gestion des actions d'un joueur dans le cadre du jeu de Monopoly. Il permet de simuler le déplacement, l'achat de terrains et le paiement des loyers.
 
+---
 
 # Documentation Technique : Classe `Terrain`
 
@@ -108,3 +115,8 @@ print(terrain_T24.prix)
 # Tentative d'achat par un joueur
 joueur = Joueur(nom="Alice", solde=400)
 terrain_T24.acheter_terrain(joueur)
+
+---
+
+
+
