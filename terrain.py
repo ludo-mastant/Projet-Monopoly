@@ -83,24 +83,10 @@ class Terrain(Case):
         else:
             print(f"{self.nom} appartient déjà à {self.proprio.nom} !")
 
-    """def get_loyer(self):
-        #Retourne le loyer à payer en fonction du nombre de maisons/hôtels
+    def get_loyer(self):
+        """Retourne le loyer à payer en fonction du nombre de maisons/hôtels"""
         if self.nbr_hotels == 1:
-            return self.loyer * 10  # Loyer multiplié avec un hôtel
-        return self.loyer * (1 + self.nbr_maisons * 0.5)  # Loyer augmente avec les maisons
-    """
+            return self.loyer * 10  # Loyer multiplié par 10 avec un hôtel
+        return self.loyer * (1 + self.nbr_maisons * 0.5)  # Loyer augmente de 50% par maison
 
-
-   # Créer un terrain appelé "Happy Teeth Island" dans la salle T24
-#happy_teeth_island = Terrain(nom="Happy Teeth Island", salle="T24")
-
-"""
-# Affichage des détails du terrain
-print(f"Nom du terrain : {happy_teeth_island.nom}")
-print(f"Numéro de salle : {happy_teeth_island.salle}")
-print(f"Prix d'achat : {happy_teeth_island.prix}€")
-print(f"Loyer de base : {happy_teeth_island.loyer}€")
-print(f"Coût de la maison : {happy_teeth_island.cout_maison}€")
-print(f"Coût de l'hôtel : {happy_teeth_island.cout_hotel}€")
-"""
     

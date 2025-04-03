@@ -26,7 +26,7 @@ class Plateau :
             CaseSpeciale("Réunion Parent-Prof","évenement"),
             Terrain("The Youth District","T24"),        
             Terrain("Sleepover'z Motel","T24"),
-            CaseSpeciale("En Prison","prison"),            
+            CaseSpeciale("En Prison","en_prison"),            
             Terrain("Happy gap-teeth city","T24")
         ]
 

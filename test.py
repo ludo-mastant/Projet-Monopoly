@@ -109,12 +109,13 @@ joueur1.acheter(terrain1)
 
 
 time.sleep(5)
-"""
+
+
 # Test si un joueur tombe sur une case spéciale
 case_tiree = random.choice(cases_speciales)
 print(f"--- TEST CASE SPECIALE ({case_tiree.nom}) ---")
 case_tiree.appliquer_effet(joueur1)
-"""
+
 case_tiree2 = cases_speciales[12]
 print(f"\n--- TEST CASE SPECIALE 2 ({case_tiree2.nom}) ---")
 case_tiree2.appliquer_effet(joueur1)
