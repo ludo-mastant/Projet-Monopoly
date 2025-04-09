@@ -22,6 +22,12 @@ class Joueur:
         return tirer
 
     def deplacement(self, nb_cases):
+        '''
+        deplacement sert a faire bouger le joueur sur le plateau 
+        @params self : objet de type Joueur
+                nb_cases : int
+        @return void
+        '''
         if not self.lance_divise_par_2 == True:
             nouvelle_position = self.position + nb_cases
             # Si la nouvelle position dépasse la taille du plateau, c'est un tour complet
