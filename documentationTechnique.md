@@ -76,7 +76,7 @@ joueur1.acheter(terrain)
 
 # Payer le loyer
 joueur1.payer(terrain)
-
+```
 ---
 
 ## Classe `Terrain`
@@ -157,7 +157,7 @@ terrain.ameliorer_terrain(joueur)
 # Récupérer le loyer du terrain
 loyer = terrain.get_loyer()
 print(f"Le loyer du terrain {terrain.nom} est de {loyer}€.")
-
+````
 ---
 ## Classe `Case`
 
@@ -300,6 +300,6 @@ La classe `Plateau` représente le plateau du jeu Monopoly. Elle contient un tab
       CaseSpeciale("En Prison", "en_prison"),
       Terrain("Happy gap-teeth city", "T24")
   ]
-
+  ````
 
 
